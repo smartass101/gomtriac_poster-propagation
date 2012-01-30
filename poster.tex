@@ -46,12 +46,12 @@
 \typeout{Poster rendering started}
 
 %%% Setting Background Image %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\background{
-	\begin{tikzpicture}[remember picture,overlay]%
-	\draw (current page.north west)+(-2em,2em) node[anchor=north west]
-	{\includegraphics[height=1.1\textheight]{background}};
-	\end{tikzpicture}
-}
+% \background{
+% 	\begin{tikzpicture}[remember picture,overlay]%
+% 	\draw (current page.north west)+(-2em,2em) node[anchor=north west]
+% 	{\includegraphics[height=1.1\textheight]{background}};
+% 	\end{tikzpicture}
+% }
 
 %%% General Poster Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% Eye Catcher, Title, Authors and University Images %%%%%%%%%%%%%%%%%%%%%%
@@ -61,8 +61,7 @@
 	% Option is left on true though the eyecatcher is not used. The reason is
 	% that we have a bit nicer looking title and author formatting in the headercol
 	% this way
-	%eyecatcher=false, 
-
+	eyecatcher=false, 
 	borderColor=bordercol,
 	headerColorOne=headercol1,
 	headerColorTwo=headercol2,
@@ -72,7 +71,7 @@
 	headershape=roundedright,
 	headerfont=\Large\sf\bf,
 	textborder=rectangle,
-	background=user,
+	background=plain,
 	headerborder=open,
   boxshade=plain
 }
@@ -92,19 +91,19 @@
 {
 % The logos are compressed a bit into a simple box to make them smaller on the result
 % (Wasn't able to find any bigger of them.)
-\setlength\fboxsep{0pt}
-\setlength\fboxrule{0.5pt}
-	\fbox{
-		\begin{minipage}{14em}
-			\includegraphics[width=10em,height=4em]{colbud_logo}
-			\includegraphics[width=4em,height=4em]{elte_logo} \\
-			\includegraphics[width=10em,height=4em]{dynanets_logo}
-			\includegraphics[width=4em,height=4em]{aitia_logo}
-		\end{minipage}
-	}
+% \setlength\fboxsep{0pt}
+% \setlength\fboxrule{0.5pt}
+% 	\fbox{
+% 		\begin{minipage}{14em}
+% 			\includegraphics[width=10em,height=4em]{colbud_logo}
+% 			\includegraphics[width=4em,height=4em]{elte_logo} \\
+% 			\includegraphics[width=10em,height=4em]{dynanets_logo}
+% 			\includegraphics[width=4em,height=4em]{aitia_logo}
+% 		\end{minipage}
+% 	}
 }
 
-\headerbox{Do \textsc{YOU} want to}{name=motivation,column=0,row=0}{
+\headerbox{Do \textsc{YOU} want to}{name=motivation,column=0,row=0, span=2}{
   \begin{itemize}
   \item \textsc{operate} a real tokamak?
   \item \textsc{experience} fusion research?
@@ -113,15 +112,31 @@
 
 }
 
-\headerbox{Acknowledgment}{name=acknowledgment, column=0, below=references}
+\headerbox{Course Outline}{name=outline, column=0, below=motivation}{
+  \begin{itemize}
+  \item A course focused on basic understanding of experimental tokamak physics and control
+  \item For undergraduate and postgraduate students interested in experimental tokamak physics
+  \item Participants do not need to leave their country to get experienced in tokamak operation. They can participate even from their home
+  \item \textsc{gomtraic} 2012 starts on March, 6th and finishes three months later, on May, 30th 2012
+  \item Participants will address 9 tasks from basic tokamak physics and technology
+
+  \end{itemize}
+}
+
+\headerbox{\textsc{golem} tokamak}{name=golem, column=1, below=motivation}{
+The basis of GOMTRAIC is remote operation of the GOLEM tokamak, see \url{http://golem.fjfi.cvut.cz},  which is operated at the Czech  Technical University, Faculty of  Nuclear Sciences and Physical  Engineering in Prague
+}
+
+\headerbox{Acknowledgment}{name=acknowledgment, column=0, below=outline}
 {
   The course is supported by \textsc{Fusenet} and the Czech Technical university
 }
-\headerbox{References}{name=references, column=1, below=<>}
+\headerbox{References}{name=references, column=0, below=outline, above=acknowledgment}
 {
   \begin{itemize}
   \item \textsc{gomtraic} website \url{http://gomtraic.fjfi.cvut.cz}
   \item \textsc{golem} tokamak website \url{http://golem.fjfi.cvut.cz}
   \end{itemize}
+}
 \end{poster}
 \end{document}
