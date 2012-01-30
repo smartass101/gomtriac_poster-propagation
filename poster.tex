@@ -9,12 +9,12 @@
 % $LastChangedBy:: rlegendi                                                 $ %
 % $Id:: poster.tex 128 2011-09-11 08:57:12Z rlegendi                        $ %
 % --------------------------------------------------------------------------- %
-\documentclass[a4paper,portrait,fontscale=1]{baposter}
+\documentclass[a4paper,portrait,fontscale=]{baposter}
 
 \usepackage{relsize}		% For \smaller
 \usepackage{url}			% For \url
 \usepackage{epstopdf}	% Included EPS files automatically converted to PDF to include with pdflatex
-
+\usepackage{graphicx}
 %%% Global Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \graphicspath{{pix/}}	% Root directory of the pictures 
@@ -128,6 +128,8 @@
 
 \headerbox{\textsc{golem} tokamak}{name=golem, column=1, below=motivation}{
 The basis of \textsc{gomtraic} is remote operation of the \textsc{golem} tokamak, see \url{http://golem.fjfi.cvut.cz},  which is operated at the Czech  Technical University, Faculty of  Nuclear Sciences and Physical  Engineering in Prague
+
+\includegraphics[width=\textwidth]{bile_pozadi_small}
 }
 
 \headerbox{Acknowledgment}{name=acknowledgment, column=0, above=bottom}
