@@ -9,7 +9,7 @@
 % $LastChangedBy:: rlegendi                                                 $ %
 % $Id:: poster.tex 128 2011-09-11 08:57:12Z rlegendi                        $ %
 % --------------------------------------------------------------------------- %
-\documentclass[a4paper,portrait,fontscale=]{baposter}
+\documentclass[a4paper,portrait,fontscale=0.65]{baposter}
 
 \usepackage{relsize}		% For \smaller
 \usepackage{url}			% For \url
@@ -132,11 +132,11 @@ The basis of \textsc{gomtraic} is remote operation of the \textsc{golem} tokamak
 \includegraphics[width=\textwidth]{bile_pozadi_small}
 }
 
-\headerbox{Acknowledgment}{name=acknowledgment, column=0, above=bottom}
+\headerbox{Acknowledgment}{name=acknowledgment, column=0,below=outline,  above=bottom}
 {
   The course is supported by \textsc{Fusenet} and the Czech Technical university
 }
-\headerbox{References}{name=references, column=0, below=outline, above=acknowledgment}
+\headerbox{References}{name=references, column=1, below=golem, above=bottom}
 {
   \begin{itemize}
   \item \textsc{gomtraic} website \\ \url{http://gomtraic.fjfi.cvut.cz}
