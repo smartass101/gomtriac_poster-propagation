@@ -6,13 +6,9 @@ and ease development
 Use the "Zip" button in the left top corner of the github site to download all files in the current revision as a zip.
 ** Git checkout
 check out the repo using git
-#+begin_src shell-script
-  git clone git://github.com/smartass101/gomtriac_poster-propagation.git
-#+end_src
+:  git clone git://github.com/smartass101/gomtriac_poster-propagation.git
 After that you can update to the current state of this repo when you want using
-#+begin_src shell-script
-  git pull origin  #or any other branch you want, e.g. `git pull origin master`
-#+end_src
+:  git pull origin  #or any other branch you want, e.g. `git pull origin master`
 * Copyright and license
 I claim no copyright over the baposer class, it's here just so it can be downloaded easily
 The original images are not my creation and I claim no copyright over them either.
